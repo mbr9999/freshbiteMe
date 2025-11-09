@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshBite - Accueil</title>
+    <link rel="stylesheet" href=""> 
+    <style>
+
+/* index */ 
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    background: url(/assets-img/citron.jpeg) no-repeat center/cover;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* section index/main */ 
+
+.main-content {
+    margin: 40px auto; 
+    max-width: 900px;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.presentation {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.presentation h3 {
+    color: #4CAF50; 
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.presentation p {
+    color: #666;
+    font-style: italic;
+}
+
+.content1, .content2 {
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1; 
+    min-width: 250px;
+    display: flex; 
+    flex-wrap: wrap; 
+    background-color: #f9fff9; 
+
+}
+
+.content2 {
+    text-align: left; 
+}
+
+.content h4 {
+    color: #388E3C; 
+    margin-top: 0;
+    border-bottom: 2px solid #C8E6C9;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive - Menu burger */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #4CAF50;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+}
+
+/* Transitions smooth */
+.nav-menu {
+    transition: all 0.3s ease;
+}
+
+    </style>
+</head>
+<body class="page-accueil">
+    
+    <header>
+        <div class="header-container">
+            <h1 class="logo">FreshBite</h1>
+            <nav class="nav-menu" aria-expanded="false">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger-btn" aria-expanded="false" aria-controls="nav-menu">
+                <span class="burger-icon">&#9776;</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="/img/citron.jpeg" alt="">
+            <div class="hero-content">
+                <h2>Dégustez des saveurs fraîches et saines !</h2>
+                <a href="menu.html" class="btn">Voir le menu</a>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="presentation">
+                <h3>Bienvenue chez FreshBite</h3>
+                <p>Découvrez notre passion pour une alimentation saine, fraîche et pleine de saveurs !</p>
+            </div>
+            
+            <div class="content"> 
+                <div class="content1">
+                    <h4>✨ A propos de nous</h4>
+                    <p>Chez *FreshBite*, notre mission est simple : transformer des ingrédients de la plus haute qualité en expériences culinaires saines et inoubliables. Nous privilégions les **circuits courts** et les **partenariats locaux** pour garantir des légumes de saison croquants et des produits frais. Chaque plat est élaboré avec soin pour vous offrir le meilleur du goût et de la nutrition.</p>
+                </div>
+                
+                <div class="content2">
+                    <h4>Horaire</h4>
+                    <p>Venez nous rendre visite!</p>
+                    <p>Lundi fermé</p>
+                    <p>Mardi - Vendredi : 10h00 - 11h00</p>
+                    <p>Samedi - Dimanche : 10h00 - 11h30</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FreshBite. Tous droits réservés. <br> facebook / instagram / twitter</p>
+    </footer>
+
+    <script src="/assets-js/script.js.js"></script>
+</body>
+</html>
+
+

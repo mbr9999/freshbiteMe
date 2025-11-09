@@ -1,0 +1,293 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshBite - Menu</title>
+    <link rel="stylesheet" href=""> 
+    <style>
+        
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- section Menu --- */
+.menu-section {
+    flex-grow: 1; 
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #333; 
+    max-height: fit-content;
+    height: 100vh;
+}
+
+.menu-section > .menu { 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    padding: 0 10px; 
+    margin-top: auto;
+}
+
+.menu-section > .menu > div[class^="card"] {  
+    flex: 1 1 calc(33.333% - 13.333px); 
+    max-width: 350px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; 
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-section > .menu > div[class^="card"]:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+figure {
+    margin: 0;
+    display: flex; 
+    align-items: flex-start; 
+    background-color: #FFFFE0;
+}
+
+img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 8px 0 0 8px; 
+}
+
+figcaption {
+    padding: 15px;
+    flex-grow: 1; 
+}
+
+figcaption h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #2a6f2a; 
+}
+
+.description {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color: #cc0000; 
+    font-size: 1.1em;
+    text-align: right;
+}
+
+
+/* Footer */
+footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* Menu burger */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #4CAF50;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+}
+
+/* Transitions smooth */
+.nav-menu {
+    transition: all 0.3s ease;
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <h1 class="logo">FreshBite</h1>
+            <nav class="nav-menu" aria-expanded="false">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger-btn" aria-expanded="false" aria-controls="nav-menu">
+                <span class="burger-icon">&#9776;</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <h2>Menu</h2>
+        <div class="menu">
+            <div class="card1">
+                <figure>
+                    <img src="/assets-img/smoth.png" alt="Smoothie vert">
+                    <figcaption>
+                        <h3>Smoothie vert</h3>                       
+                        <p class="description">Un boost de vitalité : épinards frais, banane, pomme verte et un soupçon de gingembre.</p>
+                        <span class="price">5,50 €</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="card2">
+                <figure>
+                    <img src="/assets-img/saladL.png" alt="Salade colorée">
+                    <figcaption>
+                        <h3>Salade de légumes</h3>
+                        <p class="description">Mélange croquant de saison, tomates cerises, concombre, carottes râpées, assaisonné d'une vinaigrette maison légère.</p>
+                        <span class="price">12,90 €</span>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <div class="card3">
+                <figure>
+                    <img src="/assets-img/berger.png" alt="Burger de boeuf avec laitue">
+                    <figcaption>
+                        <h3>Burger de viande et laitue</h3>
+                        <p class="description">Bœuf haché de qualité, cheddar fondant, laitue, tomate et sauce secrète, servi dans un pain brioché.</p>
+                        <span class="price">15,50 €</span>
+                    </figcaption>
+                </figure>
+              </div>
+
+              <div class="card4">
+                <figure>
+                    <img src="/assets-img/soupe.png" alt="Soupe chaude de légumes">
+                    <figcaption>
+                        <h3>Soupe de légumes</h3>
+                        <p class="description">Soupe maison réconfortante préparée avec les meilleurs légumes du marché, idéale pour se réchauffer.</p>
+                        <span class="price">7,90 €</span>
+                    </figcaption>
+                </figure>
+            </div>
+   
+            <div class="card6">
+                <figure>
+                    <img src="/assets-img/saladF.png" alt="Salade de fruits frais">
+                    <figcaption>
+                        <h3>Salade de fruits</h3>
+                        <p class="description">Sélection de fruits frais de saison coupés du jour, un dessert léger et naturellement sucré.</p>
+                        <span class="price">6,50 €</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="card5">
+                <figure>
+                    <img src="/assets-img/wrap.png" alt="Wrap frais">
+                    <figcaption>
+                        <h3>Wrap frais</h3>
+                        <p class="description">Tortilla garnie de poulet grillé (ou falafel), avocat, laitue et sauce yaourt à la menthe. Frais et nourrissant.</p>
+                        <span class="price">11,50 €</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FreshBite. Tous droits réservés. <br> facebook / instagram / twitter</p>
+    </footer>
+
+    <script src="/assets-js/script.js.js"></script>
+</body>
+</html>
+
